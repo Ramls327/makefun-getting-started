@@ -180,6 +180,26 @@ where real builders will see it: a helpful guide, a project README, a community 
 - **Mind the deadline in your own timezone.** Entries close at the stated UTC time whether or
   not your agent is finished.
 
+## Mistakes that get entries rejected
+
+Most rejections are not about the quality of the work. They are paperwork errors, and every one
+of them is avoidable:
+
+- **Building in a session that started before the bounty opened.** However good the entry is,
+  it is ineligible — the transcripts prove when the work happened, and the timing cannot be
+  argued with. Open a fresh session after the opening time, every time.
+- **Submitting without running `check` first.** The local check catches most refusals for free.
+  Skip it, and a problem you could have fixed in two minutes still burns one of your daily
+  submission slots.
+- **Copying a starter or someone else's code.** The transcripts must match the entry. Code that
+  no session in your bundle actually wrote — pasted in from a starter, a tutorial, or another
+  person's project — fails that comparison.
+- **Entering a repo owned by the wrong GitHub account.** For repo bounties, the repository must
+  belong to the GitHub account linked to your make.fun account. The same guide in a repo owned
+  by a different account is not your entry.
+- **Forgetting the license.** Entries must carry an OSI-approved open-source license. No
+  `LICENSE` file, no valid entry — add it before you submit, not after.
+
 ## FAQ
 
 **Is entering really free?**
