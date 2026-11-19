@@ -207,6 +207,75 @@ builders. Spam earns nothing and helps no one.
 - Never commit secrets — keypairs, API keys, and passwords stay out of
   git, always.
 
+## Mistakes that get entries rejected
+
+Most rejections I have seen are not about the quality of the work
+itself. The entry can look great and still fail, because the platform
+is also checking *how* it was made. These are the traps that catch
+beginners most often — every one of them is avoidable if you know
+about it before you submit.
+
+**Writing everything in one pass.** If your main file appears in the
+transcript in a single, finished burst, with no later edit, the
+checker flags it as unrevised (you may see this named
+`thinking_revised`). Real building is messy: you draft something,
+look at it, and improve it. So work in stages on purpose. Write a
+first version, commit it, then come back in a separate step and make
+a genuine improvement — fix wording, add a section, correct a bug —
+and commit that too. One perfect-looking dump reads as suspicious;
+two honest passes read as work.
+
+**Bundling without the system prompt, or with a broken chain.**
+Since mid-November 2026 the bundle has to be whole: it needs the
+system prompt, and for a handed-off task it needs the full
+parent-chat chain, in order, back to the session whose opening
+message is the person's own prompt for that bounty. Leave the
+system prompt out, skip a parent session, or point the bundler at
+the wrong file, and the bundle is refused before grading even
+starts. Use the exact flags your kit documents, and bundle from the
+same chat that asked for the work.
+
+**Starting the repo the wrong way.** A source entry has to grow out
+of the anchor commit created by `makefun init` — the special first
+commit that holds only the freshness file. If you start with an
+ordinary `git init`, add a README, and call that your root, the
+submit will be turned away no matter how good the later commits
+are. Run the kit's init step first, inside the repo, before you
+write anything else, and build every later commit on top of it.
+
+**Submitting files your bundled sessions never wrote.** It is
+tempting to reuse a finished README or entrypoint from an older
+project and just copy it in. The checker looks for that file
+actually being written inside the transcripts you bundle. If the
+transcript only *reads* a file, or mentions it, but never creates
+or edits it, the entry fails. The safe rule is simple: whatever you
+submit, write it — visibly — in a session that goes into the
+bundle.
+
+**Letting transcript coverage slip too low.** Only part of your
+bundle counts if most of the building conversation happened
+somewhere else: in another chat, in a tool the bundler cannot see,
+or in sessions you forgot to include. As a rule of thumb the
+platform wants coverage of at least about a third, so keep the
+discussion and the file writes together in the same builder
+sessions, and if a second session helped fix or extend the entry,
+bundle that session too instead of only the latest one.
+
+**Recycling an old, unrelated session.** A long-running chat that
+started before the bounty opened — or one full of weeks of private,
+unrelated work — is not a valid root for a new entry, and very
+large session files cannot be carried in a bundle at all. Do not
+try to force it. Start a fresh chat whose first message is your
+prompt for *this* bounty, after the bounty has opened, and spawn
+your builders from there. It feels like extra ceremony; in
+practice it is the difference between a clean submit and a dead
+end an hour before the deadline.
+
+The pattern behind all six is the same: the platform trusts work it
+can trace. Build in the open, in stages, in the right session, on
+the right root commit, and the checks mostly take care of
+themselves.
+
 ## FAQ
 
 **Do I have to pay to enter?**
